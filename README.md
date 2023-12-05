@@ -1,5 +1,11 @@
 # RAGs
 
+
+
+https://github.com/run-llama/rags/assets/4858925/a6204550-b3d1-4cde-b308-8d944e5d3058
+
+
+
 RAGs is a Streamlit app that lets you create a RAG pipeline from a data source using natural language.
 
 You get to do the following:
@@ -33,6 +39,8 @@ Then run the app from the "home page" file.
 streamlit run 1_🏠_Home.py
 
 ```
+
+**NOTE**: If you've upgraded the version of RAGs, and you're running into issues on launch, you may need to delete the `cache` folder in your home directory (we may have introduced breaking changes in the stored data structure between versions).
 
 ## Detailed Overview
 
@@ -77,7 +85,7 @@ It will be able to pick the right RAG tools (either top-k vector search or optio
 
 ### Builder Agent
 
-By default the builder agent uses OpenAI. This is defined in the `builder_config.py` file.
+By default the builder agent uses OpenAI. This is defined in the `core/builder_config.py` file.
 
 You can customize this to whatever LLM you want (an example is provided for Anthropic).
 
@@ -95,6 +103,10 @@ You can set the configuration either through natural language or manually for bo
 - **Embeddings**: Supports text-embedding-ada-002 by default, but also supports Hugging Face models. To use a hugging face model simply prepend with local, e.g. local:BAAI/bge-small-en.
 
 
-## Issues / Contributions
+## Resources
 
 Running into issues? Please file a GitHub issue or join our [Discord](https://discord.gg/dGcwcsnxhU).
+
+This app was built with [LlamaIndex Python](https://github.com/run-llama/llama_index).
+
+See our launch blog post [here](https://blog.llamaindex.ai/introducing-rags-your-personalized-chatgpt-experience-over-your-data-2b9d140769b1).
